@@ -302,3 +302,78 @@ footer {
     .about { font-size: 0.9rem; }
     .service-box, .package-box { padding: 15px; }
 }
+
+/* ===== EQUIPMENT SECTION ===== */
+.equipment-grid {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 20px;
+}
+
+.equipment-item {
+    background: var(--bg-darker);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #222;
+    transition: 0.3s;
+    text-align: left; /* Aligned left for bullet points */
+}
+
+.equipment-item:hover {
+    transform: translateY(-6px);
+    border-color: var(--color-accent);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.equipment-item h3 {
+    margin-bottom: 15px;
+    color: var(--color-accent);
+    font-size: 1.5rem;
+}
+
+.equipment-item ul {
+    list-style: disc;
+    margin-left: 20px;
+    color: var(--color-text);
+}
+
+.equipment-item ul li {
+    padding: 5px 0;
+    font-size: 1rem;
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS FOR EQUIPMENT ===== */
+@media (max-width: 900px) {
+    .equipment-grid {
+        gap: 20px;
+        padding: 15px;
+    }
+    .equipment-item {
+        padding: 20px;
+    }
+    .equipment-item h3 {
+        font-size: 1.3rem;
+    }
+    .equipment-item ul li {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .equipment-grid {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+    .equipment-item {
+        padding: 15px;
+    }
+    .equipment-item h3 {
+        font-size: 1.2rem;
+    }
+    .equipment-item ul li {
+        font-size: 0.9rem;
+    }
+}
